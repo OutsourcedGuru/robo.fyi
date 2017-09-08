@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+<body>
+	<% include navbar %>
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Robo C2</h1>
+			<p>Paragraph</p>
+			<p>
+				<a class="btn btn-primary btn-lg" role="button">Learn more
+					&raquo;</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<% include content-robo-c2 %>
+		<hr>
+
+		<% include footer %>
+	</div>
+	<!-- /container -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#home').addClass("active");
+		});
+	</script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
