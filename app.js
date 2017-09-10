@@ -45,6 +45,8 @@ app.get('/troubleshooting', troubleshooting.index);
 
 var hardware = require('./routes/hardware');
 app.get('/hardware', hardware.index);
+var hardware_parts_by_printer_by_vendor = require('./routes/hardware-parts-by-printer-by-vendor');
+app.get('/hardware/parts-by-printer-by-vendor', hardware_parts_by_printer_by_vendor.index);
 
 var software = require('./routes/software');
 app.get('/software', software.index);

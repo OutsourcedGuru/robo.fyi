@@ -2,16 +2,28 @@
 <!-- Example row of columns -->
 <div class="row">
 	<div class="col-md-10">
-    <a name="robo-c2"></a>
+		<h2 onClick='document.location="/hardware/parts-by-printer-by-vendor";'>Parts by Printer by Vendor</h2>
+		<p>Go <a href="/hardware/parts-by-printer-by-vendor">here</a> for the full part database.</p>
+		<hr>
+
+		<a name="robo-c2"></a>
 		<h2 onClick='document.location="#";'>Robo C2</h2>
-		<p style='text-align:justify'>Paragraph.</p>
+		<p style='text-align:justify'>Hover over the image below to find more detail about the parts and subassemblies.</p>
+		<map name="roboc2map" comment="685 × 485">
+      <!--area shape="circle" coords="20,20,60" href="#" title="circle" /-->
+      <area shape="rect" coords="110,150,195,190" href="#" title="hotend assembly" onClick="if (confirm('Visit part detail for hotend assembly?') == true) document.location = '/hardware/robo-c2/hotend-assembly';" />
+      <area shape="rect" coords="100,280,200,310" href="#" title="bed" onClick="if (confirm('Visit part detail for bed?') == true) document.location = '/hardware/robo-c2/bed';" />
+	  </map>
+		<img src="/images/Robo_C2_FrontAndSide.png" usemap="#roboc2map">
+		<hr>
 
     <a name="robo-r2"></a>
-		<h2 onClick='document.location="#";'>Robo R2</h2>
-		<p style='text-align:justify'>Paragraph.</p>
-
+		<h2>Robo R2</h2>
+		<p style='text-align:justify;color:gray'>Hover over the image below to find more detail about the parts and subassemblies.</p>
+		<hr>
+		
     <a name="robo-r1plus"></a>
-		<h2 onClick='document.location="#";'>Robo R1+ Plus</h2>
-		<p style='text-align:justify'>Paragraph.</p>
+		<h2>Robo R1+ Plus</h2>
+		<p style='text-align:justify;color:gray'>Hover over the image below to find more detail about the parts and subassemblies.</p>
 	</div>
 </div>
