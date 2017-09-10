@@ -7,6 +7,8 @@ Robo.fyi is an attempt to gather and share a variety of information about 3D pri
 The contents of this GitHub repository are used to build http://robo.fyi.
 This project aims to collect together a variety of information within the hobbyist space with respect to 3D printers, their use, tips/tricks, sources for parts, how-to's regarding dissassembly/re-assembly and troubleshooting. The initial focus will be to document the collection of printers created by Robo 3D. It may be a later intent to monetize this with available affiliate programs within the vendorspace but that's not planned soon.
 
+![robohomepage](https://user-images.githubusercontent.com/15971213/30245435-56fdd6c2-958e-11e7-9844-4ddd5f1a8ab7.png)
+
 # Installation
 This is a classic Node.js app using Express and Bootstrap for styling. I assume that you have `git` and `Node.js` already installed. The commands below work on Linux and OS X in a terminal session—for Windows, you'll want to just enter the URL into your browser manually on that final step.
 
