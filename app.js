@@ -50,6 +50,8 @@ app.get('/hardware/parts-by-printer-by-vendor', hardware_parts_by_printer_by_ven
 
 var software = require('./routes/software');
 app.get('/software', software.index);
+var software_software_by_type_by_vendor = require('./routes/software-software-by-type-by-vendor');
+app.get('/software/software-by-type-by-vendor', software_software_by_type_by_vendor.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

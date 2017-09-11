@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../views/header %>
+<body>
+	<% include ../views/navbar %>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Software by Type by Vendor</h1>
+			<p>Sometimes you just need a big table of information.</p>
+			<div id="LearnMore" style="display:none"><p>I put together a list of all software in the database. If you do discover a mistake in any of this information, please contact us and we'll update our database.</p></div>
+			<div id="LearnLess"><p><a class="btn btn-primary btn-lg" role="button" onClick='document.getElementById("LearnMore").style.display="block";document.getElementById("LearnLess").style.display="none";'>Learn more	&raquo;</a></p></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<% include content-software-by-type-by-vendor %>
+		<hr>
+
+		<% include ../views/footer %>
+	</div>
+	<!-- /container -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#home').addClass("active");
+		});
+	</script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
