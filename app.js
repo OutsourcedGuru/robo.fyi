@@ -47,6 +47,8 @@ var hardware = require('./routes/hardware');
 app.get('/hardware', hardware.index);
 var hardware_parts_by_printer_by_vendor = require('./routes/hardware-parts-by-printer-by-vendor');
 app.get('/hardware/parts-by-printer-by-vendor', hardware_parts_by_printer_by_vendor.index);
+var hardware_robo_c2r2_board = require('./routes/hardware-robo-c2r2-board');
+app.get('/hardware/robo-c2r2-board', hardware_robo_c2r2_board.index);
 
 var software = require('./routes/software');
 app.get('/software', software.index);

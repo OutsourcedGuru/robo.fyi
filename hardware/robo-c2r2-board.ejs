@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../views/header %>
+
+<body>
+	<% include ../views/navbar %>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Hardware - C2/R2 Robo Board subassembly</h1>
+			<p>Here's a breakdown of the Robo control board for both C2/R2 printers.</p>
+			<div id="LearnMore" style="display:none"><p>It's kind of handy to see a "naked" board out of the printer and to know which connections go where. If you do discover a mistake in any of this information, please contact us and we'll update our database.</p></div>
+			<div id="LearnLess"><p><a class="btn btn-primary btn-lg" role="button" onClick='document.getElementById("LearnMore").style.display="block";document.getElementById("LearnLess").style.display="none";'>Learn more	&raquo;</a></p></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<% include content-robo-c2r2-board %>
+		<hr>
+
+		<% include ../views/footer %>
+	</div>
+	<!-- /container -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#home').addClass("active");
+		});
+	</script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
