@@ -29,7 +29,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-//app.get('/users', user.list);
 
 var about = require('./routes/about');
 app.get('/about', about.about);
@@ -54,6 +53,18 @@ var software = require('./routes/software');
 app.get('/software', software.index);
 var software_software_by_type_by_vendor = require('./routes/software-software-by-type-by-vendor');
 app.get('/software/software-by-type-by-vendor', software_software_by_type_by_vendor.index);
+
+// Error handler for 404
+app.use(function(req, res, neext) {
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  var protocol = req.protocol;
+  var url = req.url;
+  var now = new Date();
+  var timestamp = (now.getMonth() + 1).toString() + '/' + (now.getDate()).toString() + ' ' + (now.getHours() + 1).toString() + ':' + (now.getMinutes() + 1).toString();
+  console.log(' WARNING: suspected hacking attempt [' + timestamp + '][' + protocol + '][' + url + '][' + ip + ']');
+  res.status(400);
+  res.send('404: File Not Found');
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
