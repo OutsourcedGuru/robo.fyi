@@ -54,6 +54,24 @@ app.get('/software', software.index);
 var software_software_by_type_by_vendor = require('./routes/software-software-by-type-by-vendor');
 app.get('/software/software-by-type-by-vendor', software_software_by_type_by_vendor.index);
 
+// Redirect hacking attempts to the FBI Internet Crime Compliant Center (IE3)
+var hacking = require('./routes/hacking');
+app.get('/admin',                      hacking.index);
+app.get('/administrator',              hacking.index);
+app.get('/database',                   hacking.index);
+app.get('/db',                         hacking.index);
+app.get('/dbadmin',                    hacking.index);
+app.get('/mysql',                      hacking.index);
+app.get('/mysql/admin',                hacking.index);
+app.get('/mysql/dbadmin',              hacking.index);
+app.get('/mysql/sqlmanager',           hacking.index);
+app.get('/phpmanager',                 hacking.index);
+app.get('/phpmyadmin',                 hacking.index);
+app.get('/sql',                        hacking.index);
+app.get('/webadmin',                   hacking.index);
+app.get('/webdb',                      hacking.index);
+app.get('/websql',                     hacking.index);
+
 // Error handler for 404
 app.use(function(req, res, neext) {
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
