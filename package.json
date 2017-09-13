@@ -1,7 +1,7 @@
 {
   "name": "robo.fyi",
   "description": "Robo.fyi is an attempt to gather and share a variety of information about 3D printers and specifically, the line of printers created by Robo 3D.",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "private": false,
   "author": "OutsourcedGuru",
   "email": "info@robo.fyi",
@@ -10,12 +10,13 @@
     "type": "git",
     "url": "https://github.com/OutsourcedGuru/robo.fyi.git"
   },
-  "license" : "GPL-3.0",
+  "license": "GPL-3.0",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
+    "ejs": "*",
     "express": "3.3.5",
-    "ejs": "*"
+    "serve-favicon": "^2.4.4"
   }
 }

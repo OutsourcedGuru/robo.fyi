@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-//var user = require('./routes/user');
+var favicon = require('serve-favicon');
 
 var http = require('http');
 var path = require('path');
@@ -16,12 +16,12 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -54,19 +54,32 @@ app.get('/software', software.index);
 var software_software_by_type_by_vendor = require('./routes/software-software-by-type-by-vendor');
 app.get('/software/software-by-type-by-vendor', software_software_by_type_by_vendor.index);
 
+// Deal with requests for robots.txt from web crawlers
+app.use(function(req, res, next) {
+  if ('/robots.txt' == req.url) {
+    res.type('text/plain')
+    res.send("User-agent: *\nDisallow: /");
+  } else {
+    next();
+  }
+});
+
 // Redirect hacking attempts to the FBI Internet Crime Compliant Center (IE3)
 var hacking = require('./routes/hacking');
 app.get('/admin',                      hacking.index);
 app.get('/administrator',              hacking.index);
+app.get('/command.php',                hacking.index);
 app.get('/database',                   hacking.index);
 app.get('/db',                         hacking.index);
 app.get('/dbadmin',                    hacking.index);
+app.get('/hedwig.cgi',                 hacking.index);
 app.get('/mysql',                      hacking.index);
 app.get('/mysql/admin',                hacking.index);
 app.get('/mysql/dbadmin',              hacking.index);
 app.get('/mysql/sqlmanager',           hacking.index);
 app.get('/phpmanager',                 hacking.index);
 app.get('/phpmyadmin',                 hacking.index);
+app.get('/setup',                      hacking.index);
 app.get('/sql',                        hacking.index);
 app.get('/webadmin',                   hacking.index);
 app.get('/webdb',                      hacking.index);
