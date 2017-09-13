@@ -1,3 +1,22 @@
+<style>
+	#Holder { position: relative; top: 0; left: 0; }
+	#After { position: absolute; top: 0; left: 0; z-index: 100; }
+	#Before { position: relative; top: 0;	left: 0; z-index: 101; }
+</style>
+<script>
+	var range = 200;
+	window.addEventListener('scroll', function(e) {
+    var marginAbove = 400 - range;
+		var divBefore = document.getElementById('Before');
+		var scrollTop = window.scrollY;
+		var height = 800;
+		var offset = height / 2;
+		var calc = 1 - ((scrollTop - marginAbove - offset + range) / range);
+    if (calc > '1') calc = 1;
+		if (calc < '0') calc = 0;
+    divBefore.style.opacity = calc;
+	});
+</script>
 
 <!-- Example row of columns -->
 <div class="row">
@@ -11,13 +30,25 @@
 		<a name="robo-c2"></a>
 		<h2 onClick='document.location="#";'>Robo C2</h2>
 		<p style='text-align:justify'>Hover over the image below to find more detail about the parts and subassemblies.</p>
-		<map name="roboc2map" comment="685 × 485">
-      <!--area shape="circle" coords="20,20,60" href="#" title="circle" /-->
-      <area shape="rect" coords="110,150,195,190" href="#" title="hotend assembly" onClick="if (confirm('Visit part detail for hotend assembly?') == true) document.location = '/hardware/robo-c2/hotend-assembly';" />
-      <area shape="rect" coords="100,280,200,310" href="#" title="bed" onClick="if (confirm('Visit part detail for bed?') == true) document.location = '/hardware/robo-c2/bed';" />
-	  </map>
-		<img src="/images/Robo_C2_FrontAndSide.png" usemap="#roboc2map">
+		<map name="roboc2map" comment="1000 × 800">
+			<area nohref title="Robo controller board" shape="poly"
+			  onClick="if (confirm('Visit Robo Board detail?') == true) document.location = '/hardware/robo-c2r2-board';"
+				coords="559,653, 513,624, 517,612, 552,597, 607,623">
+			<area nohref title="Print bed" shape="poly"
+				coords="553,486, 630,455, 729,486, 648,521">
+			<area nohref title="LCD assembly" shape="poly"
+				coords="778,526, 834,502, 855,543, 797,570">
+			<area nohref title="Raspberry Pi 3 computer" shape="poly"
+				coords="429,628, 461,611, 540,651, 516,671">
+			<area nohref title="Extruder/hotend assembly" shape="poly"
+				coords="481,135, 509,131, 530,135, 541,147, 545,214, 559,236, 553,256, 527,262, 505,269, 475,258, 473,242, 479,218">
+		</map>
+    <div id="Holder">
+			<div id="Before"><img src="/images/RoboC2_Before.png" width="1000" usemap="#roboc2map"></div>
+			<div id="After"><img src="/images/RoboC2_Exploded.png" width="1000"></div>
+  	</div>
 		<hr>
+
 
     <a name="robo-r2"></a>
 		<h2>Robo R2</h2>
