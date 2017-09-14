@@ -8,7 +8,7 @@
 	window.addEventListener('scroll', function(e) {
     var marginAbove = 400 - range;
 		var divBefore = document.getElementById('Before');
-		var scrollTop = window.scrollY;
+		var scrollTop = window.pageYOffset;  // window.scrollY isn't IE-compatible
 		var height = 800;
 		var offset = height / 2;
 		var calc = 1 - ((scrollTop - marginAbove - offset + range) / range);
