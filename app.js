@@ -54,6 +54,11 @@ app.get('/software', software.index);
 var software_software_by_type_by_vendor = require('./routes/software-software-by-type-by-vendor');
 app.get('/software/software-by-type-by-vendor', software_software_by_type_by_vendor.index);
 
+var consumables = require('./routes/consumables');
+app.get('/consumables', consumables.index);
+var consumables_filament_by_type_by_vendor = require('./routes/consumables-filament-by-type-by-vendor');
+app.get('/consumables/filament-by-type-by-vendor', consumables_filament_by_type_by_vendor.index);
+
 // Deal with requests for robots.txt from web crawlers
 app.use(function(req, res, next) {
   if ('/robots.txt' == req.url) {
