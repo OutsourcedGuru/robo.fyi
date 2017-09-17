@@ -59,6 +59,9 @@ app.get('/consumables', consumables.index);
 var consumables_filament_by_type_by_vendor = require('./routes/consumables-filament-by-type-by-vendor');
 app.get('/consumables/filament-by-type-by-vendor', consumables_filament_by_type_by_vendor.index);
 
+var videos = require('./routes/videos');
+app.get('/videos', videos.index);
+
 // Deal with requests for robots.txt from web crawlers
 app.use(function(req, res, next) {
   if ('/robots.txt' == req.url) {
