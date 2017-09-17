@@ -1,7 +1,7 @@
 {
   "name": "robo.fyi",
   "description": "Robo.fyi is an attempt to gather and share a variety of information about 3D printers and specifically, the line of printers created by Robo 3D.",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": false,
   "author": "OutsourcedGuru",
   "email": "info@robo.fyi",
