@@ -11,6 +11,7 @@ a {
   filter: gray;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  width: 322px;
 }
 
 .gray-img:hover {
@@ -18,56 +19,199 @@ a {
   filter: none;
 }
 
+#C2SmallerScreen { display: none; }
+#C2Holder #Before img {
+  width: 1000px;
+}
+#C2Holder #After img {
+  width: 1000px;
+}
+
+.video {
+  width: 560px;
+  height: 315px;
+}
+
+.R1_hw, .R2_hw {
+  width: 685px;
+}
+
 /* Added CSS3 media queries to better style "other" screens */
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPhone 4 and 4S */
+/* ---------------------------------------------------------------------------- */
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}*/
 
-/*==========  Mobile First Method  ==========*/
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPhone 5 and 5S */
+/* ---------------------------------------------------------------------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body {
+    padding: 10px;
+  }
+  /* Home page, for example */
+  .gray-img {
+    width: 260px;
+  }
+  /* About page */
+  .panel-body img {
+    width: 100%;
+  }
+  /* Videos */
+  .video {
+    width: 280px;
+    height: 158px;
+  }
+  .col-md-10 h2 {
+    font-size: 120%;
+  }
+  /* Hardware */
+  #C2DefaultScreen { display: none; }
+  #C2SmallerScreen { display: block; }
+  #C2Holder #Before img {
+    width: 270px;
+  }
+  #C2Holder #After img {
+    width: 270px;
+  }
+  .R1_hw, .R2_hw {
+    width: 270px;
+  }  
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  body {
+    padding: 20px;
+  }
+  /* Home page, for example */
+  .gray-img {
+    width: 500px;
+  }
+  /* About page */
+  .panel-body img {
+    width: 100%;
+  }
+  /* Videos */
+  .video {
+    width: 504px;
+    height: 284px;
+  }
+  /* Hardware */
+  #C2DefaultScreen { display: none; }
+  #C2SmallerScreen { display: block; }
+  #C2Holder #Before img {
+    width: 500px;
+  }
+  #C2Holder #After img {
+    width: 500px;
+  }
+  .R1_hw, .R2_hw {
+    width: 500px;
+  }  
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPhone 6 */
+/* ---------------------------------------------------------------------------- */
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { 
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) { 
+}*/
 
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPhone 6+ */
+/* ---------------------------------------------------------------------------- */
+/*@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) { 
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { 
+}*/
+
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPad Mini */
+/* ---------------------------------------------------------------------------- */
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}*/
+
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPad 1 and 2 */
+/* ---------------------------------------------------------------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    padding: 10px;
+  }
+  /* Home page, mostly */
+  .col-md-4 p {
+    width: 95%;
+  }
+  /* Home page, for example */
+  .gray-img {
+    width: 362px;
+  }
+  /* About page */
+  .panel-body img {
+    width: 95%;
+  }
+  /* Hardware */
+  #C2DefaultScreen { display: none; }
+  #C2SmallerScreen { display: block; }
+  #C2Holder #Before img {
+    width: 700px;
+  }
+  #C2Holder #After img {
+    width: 700px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    padding: 20px;
+  }
+  /* Home page, for example */
+  .gray-img {
+    width: 222px;
+  }
+  /* About page */
+  .panel-body img {
+    width: 97%;
+  }
+  /* Hardware */
+  #C2DefaultScreen { display: none; }
+  #C2SmallerScreen { display: block; }
+  #C2Holder #Before img {
+    width: 900px;
+  }
+  #C2Holder #After img {
+    width: 900px;
+  }
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
+/* ---------------------------------------------------------------------------- */
+/* For example, the iPad 3 and 4 */
+/* ---------------------------------------------------------------------------- */
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}*/
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+/* ---------------------------------------------------------------------------- */
+/* For example, Non-Retina Screens in the 800x600 area (more or less) */
+/* ---------------------------------------------------------------------------- */
+/*@media screen and (min-width: 600px) and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 1) { 
+}*/
+/* ---------------------------------------------------------------------------- */
+/* For example, Non-Retina Screens in the 1366x768 area (more or less) */
+/* ---------------------------------------------------------------------------- */
+/*@media screen and (min-width: 801px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+}*/
+/* ---------------------------------------------------------------------------- */
+/* For example, Non-Retina Screens in the 1920x1080 area (more or less) */
+/* ---------------------------------------------------------------------------- */
+/*@media screen and (min-width: 1601px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) { 
+}*/
 
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-}
-
-/*==========  Non-Mobile First Method  ==========*/
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-
-}
-
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-
-}
+/* ----------- Retina Screens ----------- */
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) { 
+}*/

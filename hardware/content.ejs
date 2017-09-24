@@ -1,5 +1,5 @@
 <style>
-	#Holder { position: relative; top: 0; left: 0; }
+	#C2Holder { position: relative; top: 0; left: 0; }
 	#After { position: absolute; top: 0; left: 0; z-index: 100; }
 	#Before { position: relative; top: 0;	left: 0; z-index: 101; }
 </style>
@@ -29,7 +29,9 @@
 
 		<a name="robo-c2"></a>
 		<h2 onClick='document.location="#";'>Robo C2</h2>
-		<p style='text-align:justify'>Hover over the image below to find more detail about the parts and subassemblies.</p>
+		<p style='text-align:justify'>
+			<div id="C2DefaultScreen">Hover over the exploded image below to find more detail about the parts and subassemblies.</div>
+			<div id="C2SmallerScreen">Here is an exploded view of the Robo C2 printer.</div></p>
 		<map name="roboc2map" comment="1000 × 800">
 			<area nohref title="Robo controller board" shape="poly"
 			  onClick="if (confirm('Visit Robo Board detail?') == true) document.location = '/hardware/robo-c2r2-board';"
@@ -43,23 +45,22 @@
 			<area nohref title="Extruder/hotend assembly" shape="poly"
 				coords="481,135, 509,131, 530,135, 541,147, 545,214, 559,236, 553,256, 527,262, 505,269, 475,258, 473,242, 479,218">
 		</map>
-    <div id="Holder">
-			<div id="Before"><img src="/images/RoboC2_Before.png" width="1000" usemap="#roboc2map"></div>
-			<div id="After"><img src="/images/RoboC2_Exploded.png" width="1000"></div>
+    <div id="C2Holder">
+			<div id="Before"><img src="/images/RoboC2_Before.png" usemap="#roboc2map"></div>
+			<div id="After"><img src="/images/RoboC2_Exploded.png"></div>
   	</div>
 		<hr>
 
-
     <a name="robo-r2"></a>
 		<h2>Robo R2</h2>
-		<p style='text-align:justify;color:gray'>Hover over the image below to find more detail about the parts and subassemblies.</p>
-		<img src="/images/Robo_R2_FrontLarge.png" width="685">
-		<img src="/images/Robo_R2_Top.png" width="685">
+		<p style='text-align:justify;color:gray'><i>Hover over the image below to find more detail about the parts and subassemblies. (Feature not yet implemented.)</i></p>
+		<img class="R2_hw" src="/images/Robo_R2_FrontLarge.png">
+		<img class="R2_hw" src="/images/Robo_R2_Top.png">
 		<hr>
 		
     <a name="robo-r1plus"></a>
 		<h2>Robo R1+ Plus</h2>
-		<p style='text-align:justify;color:gray'>Hover over the image below to find more detail about the parts and subassemblies.</p>
-		<img src="/images/Robo_R1Plus_FrontLarge.jpg" width="685">
+		<p style='text-align:justify;color:gray'><i>Hover over the image below to find more detail about the parts and subassemblies. (Feature not yet implemented.)</i></p>
+		<img class="R1_hw" src="/images/Robo_R1Plus_FrontLarge.jpg">
 	</div>
 </div>
