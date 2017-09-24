@@ -28,8 +28,12 @@ If you've spotted an error, omission or have a suggestion, raise an [issue](http
 I'll work up a process for the preferred method for making contributions. We're not quite there, yet.
 
 # Roadmap & wishlist
-* Create an artistic, responsive website from the main page and drill into specific printer subsections
-* Create a compelling/interactive interface for viewing and then drilling down into subassemblies
+* <s>Create an artistic, responsive website from the main page and drill into specific printer subsections</s>
+* <s>Create a compelling/interactive interface for viewing and then drilling down into subassemblies</s>
+* <s>Create part, software and filament databases and present those</s>
+* <s>Create the mapping for the Robo C2/R2 controller board</s>
+* Detail all connections in the Robo C2/R2 controller board
+* Detail the hotend/extruder assembly of the Robo C2
 * Create an organized method of storing the underlying source data for available replacement parts
 
 # Acknowledgement
