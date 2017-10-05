@@ -29,6 +29,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/apple-touch-icon-precomposed.png', function(req, res) {
+  res.redirect('/apple-touch-icon.png');  
+});
 
 var about = require('./routes/about');
 app.get('/about', about.about);
@@ -48,6 +51,8 @@ var hardware_parts_by_printer_by_vendor = require('./routes/hardware-parts-by-pr
 app.get('/hardware/parts-by-printer-by-vendor', hardware_parts_by_printer_by_vendor.index);
 var hardware_robo_c2r2_board = require('./routes/hardware-robo-c2r2-board');
 app.get('/hardware/robo-c2r2-board', hardware_robo_c2r2_board.index);
+var hardware_parts_by_printer_by_subassembly = require('./routes/hardware-parts-by-printer-by-subassembly');
+app.get('/hardware/parts-by-printer-by-subassembly', hardware_parts_by_printer_by_subassembly.index);
 
 var software = require('./routes/software');
 app.get('/software', software.index);
@@ -94,7 +99,7 @@ app.get('/webdb',                      hacking.index);
 app.get('/websql',                     hacking.index);
 
 // Error handler for 404
-app.use(function(req, res, neext) {
+app.use(function(req, res, next) {
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var protocol = req.protocol;
   var url = req.url;

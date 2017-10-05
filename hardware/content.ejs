@@ -37,18 +37,40 @@
 			<div id="C2DefaultScreen">Hover over the exploded image below to find more detail about the parts and subassemblies.</div>
 			<div id="C2SmallerScreen">Here is an exploded view of the Robo C2 printer.</div></p>
 		<map name="roboc2map" comment="1000 × 800">
-			<area nohref title="Robo controller board" shape="poly"
-			  onClick="if (confirm('Visit Robo Board detail?') == true) document.location = '/hardware/robo-c2r2-board';"
-				coords="559,653, 513,624, 517,612, 552,597, 607,623">
-			<area nohref title="Print bed" shape="poly"
+			<area nohref title="Print bed (click for detail)" shape="poly"
+				onClick="if (confirm('Visit print bed detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-print-bed';"
 				coords="553,486, 630,455, 729,486, 648,521">
 			<area nohref title="LCD assembly" shape="poly"
+				onClick="if (confirm('Visit LCD assembly detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-panels';"
 				coords="778,526, 834,502, 855,543, 797,570">
-			<area nohref title="Raspberry Pi 3 computer" shape="poly"
+			<area nohref title="Robo controller board (click for detail)" shape="poly"
+			  onClick="if (confirm('Visit Robo Board detail?') == true) document.location = '/hardware/robo-c2r2-board';"
+				coords="559,653, 513,624, 517,612, 552,597, 607,623">
+			<area nohref title="Raspberry Pi 3 computer (click for detail)" shape="poly"
+				onClick="if (confirm('Visit Raspberry Pi 3 detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-underneath';"
 				coords="429,628, 461,611, 540,651, 516,671">
-			<area nohref title="Extruder/hotend assembly" shape="poly"
+			<area nohref title="Everything under the trap door (click for detail)" shape="poly"
+				onClick="if (confirm('Visit bottom printer detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-underneath';"
+				coords="365,610, 408,591, 485,612, 615,571, 643,608, 627,643, 523,692, 385,640">
+			<area nohref title="Extruder/hotend assembly (click for detail)" shape="poly"
+				onClick="if (confirm('Visit hotend assembly detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-hotend';"
 				coords="481,135, 509,131, 530,135, 541,147, 545,214, 559,236, 553,256, 527,262, 505,269, 475,258, 473,242, 479,218">
-		</map>
+			<area nohref title="Stepper motors (click for detail)" shape="poly"
+				onClick="if (confirm('Visit stepper motors detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-hotend';"
+				coords="356,438, 393,427, 419,436, 417,464, 385,480, 357,474">
+			<area nohref title="Stepper motors (click for detail)" shape="poly"
+				onClick="if (confirm('Visit stepper motors detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-hotend';"
+				coords="476,412, 509,407, 533,416, 533,447, 511,456, 476,444">
+			<area nohref title="Panel assembly" shape="poly"
+				onClick="if (confirm('Visit panel assembly detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-panels';"
+				coords="263,635, 147,587, 132,528, 121,302, 131,279, 173,291, 176,210, 320,182, 355,187, 363,368, 352,403, 243,428, 255,590, 268,588, 280,628">
+			<area nohref title="Panel assembly" shape="poly"
+				onClick="if (confirm('Visit panel assembly detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-panels';"
+				coords="725,424, 673,411, 688,372, 689,178, 803,195, 807,256, 896,224, 912,235, 925,324, 913,500, 889,571, 756,636, 721,623">
+			<area nohref title="Panel assembly" shape="poly"
+				onClick="if (confirm('Visit panel assembly detail?') == true) document.location = '/hardware/parts-by-printer-by-subassembly#robo-c2-panels';"
+				coords="341,114, 355,70, 501,52, 651,67, 653,111, 519,94, 491,98, 485,136">				
+			</map>
     <div id="C2Holder">
 			<div id="Before"><img src="/images/RoboC2_Before.png" usemap="#roboc2map"></div>
 			<div id="After"><img src="/images/RoboC2_Exploded.png"></div>
